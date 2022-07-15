@@ -51,6 +51,86 @@ body {
   margin: 0 auto;
 }
 
+/* 안내창 */
+.modal-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+}
+
+.fa {
+  position: absolute;
+  display: block;
+  top: 24%;
+  right: 37%;
+  font-size: 130px;
+  color: rgba(250, 19, 19, 0.1);
+}
+
+.modal-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 570px;
+  height: 220px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(207, 174, 197, 0.212);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-main h1 {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  color: #555;
+  padding-top: 10px;
+}
+
+.modal-main p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.8;
+  padding: 20px;
+}
+
+.modal-main b {
+  font-weight: 600;
+  color: #ff4a50;
+}
+
+.modal-main strong {
+  font-weight: 500;
+  font-size: 17px;
+  padding: 2px;
+  line-height: 16px;
+}
+
+.modal-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 16px;
+  top: 16px;
+  border: 0;
+  cursor: pointer;
+  background: url('../images/cancel.png') no-repeat center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg);
+}
+
 .wrap {
   padding-top: 80px;
 }
@@ -65,7 +145,8 @@ body {
   width: 100%;
   height: 80px;
   transition: height 0.5s;
-  z-index: 9999;
+  z-index: 9999;  
+  box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 20%);
 }
 
 .header-open {
@@ -437,10 +518,145 @@ body {
 }
 
 /* 고객센터 */
-.cs {}
+.cs {
+  background: #f8f8f8;
+}
+.cs .inner {
+  padding: 60px 0;
+}
+.cs .inner a {
+  display: block;
+  float: left;
+  width: calc(50% - 1px);
+  padding: 50px 55px;
+}
+.cs-faq {
+  margin-right: 2px;
+  background: #fff url('../images/bg_faq.png') no-repeat;
+  background-position: calc(100% - 50px) center;
+}
+.cs-qa {
+  background: #fff url('../images/bg_custom.png') no-repeat;
+  background-position: calc(100% - 50px) center;
+}
+
+.cs h3 {
+  font-size: 30px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.cs p {
+  font-weight: 300;
+}
 
 /* 소개 */
 .about {}
+.about .inner {
+  padding: 100px 0;
+}
+.about-top {
+  background: url('../images/img_about.png') no-repeat;
+  background-position: right top;
+  padding-bottom: 70px;
+}
+
+.about-top h2 {
+  font-size: 44px;
+  color: #111;
+  margin-bottom: 55px;
+}
+
+.about-top p {
+  position: relative;
+  padding-left: 100px;
+}
+
+.about-top p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 37px;
+  height: 5px;
+  background-color: #ed1c24;
+}
+
+.about-top p strong {  
+  display: block;
+  font-size: 21px;
+  color: #111;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.about-top p span {
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.about-bottom {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.about-bottom a {
+  display: inline-block;
+  margin-right: 210px;
+
+  font-size: 22px;
+  font-weight: 500;
+  color: #111;
+}
+
+.about-bottom a::before {
+  content: '';
+  position: relative;
+  display: block;
+
+  width: 100px;
+  height: 108px;
+  background: url('../images/bg_icon.png') no-repeat;
+
+  margin-bottom: 25px;
+}
+
+.about-bottom .about-link-1::before {
+  background-position: 0 0;
+}
+.about-bottom .about-link-2::before {
+  background-position: 50% 0;
+}
+
+.about-bottom .about-link-3 {
+  margin-right: 0;
+}
+.about-bottom .about-link-3::before {
+  background-position: 100% 0;
+}
 
 /* 하단 */
-.footer {}
+.footer {
+  background-color: #4e4e4e;
+}
+.footer .inner {
+  padding: 50px 0;
+}
+
+.footer-wrap {
+  padding-left: 250px;
+  background: url('../images/logo_footer.png') no-repeat;
+}
+
+.footer-wrap address {
+  color: #c3c3c3;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.copy {
+  color: #c3c3c3;
+  font-size: 13px;
+}
